@@ -50,8 +50,14 @@ BOTONCERRAR.addEventListener('click',() => {
 //Validar enter
 INTENTO.addEventListener('keydown', (event) =>{
     if (event.key === 'Enter') {
-    intentar();
-     INTENTO.value='';
+        if (INTENTO.value === '') {
+            ERROR.style.display = 'block';
+        }
+        else{
+        ERROR.style.display = 'none';
+        intentar();
+        INTENTO.value='';
+        }
  }})
 
 /*-----FUNCIONES----- */
